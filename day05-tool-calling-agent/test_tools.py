@@ -1,24 +1,48 @@
-from tools import get_weather
-from tools import convert_currency
+from tool_registry import ToolRegistry
+
+registry = ToolRegistry()
 
 print("=" * 50)
-print("Weather Tool")
+print("Available Tools")
 print("=" * 50)
 
 print(
-    get_weather("Mumbai")
+    registry.get_available_tools()
 )
 
 print()
 
 print("=" * 50)
-print("Currency Tool")
+print("Weather")
 print("=" * 50)
 
 print(
-    convert_currency(
-        500,
-        "USD",
-        "INR"
+    registry.execute(
+        "get_weather",
+        city="Mumbai"
     )
 )
+
+print()
+
+print("=" * 50)
+print("Currency")
+print("=" * 50)
+
+print(
+    registry.execute(
+        "convert_currency",
+        amount=500,
+        from_currency="USD",
+        to_currency="INR"
+    )
+)
+
+print()
+
+print("=" * 50)
+print("Tool Metadata")
+print("=" * 50)
+
+for tool in registry.describe_tools():
+    print(tool)
