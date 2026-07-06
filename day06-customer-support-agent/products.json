@@ -1,0 +1,23 @@
+[
+    {
+        "product_id":"P101",
+        "name":"Mechanical Keyboard",
+        "price":89.99,
+        "stock":45,
+        "description":"RGB Mechanical Keyboard"
+    },
+    {
+        "product_id":"P102",
+        "name":"Gaming Mouse",
+        "price":49.99,
+        "stock":30,
+        "description":"Wireless Gaming Mouse"
+    },
+    {
+        "product_id":"P103",
+        "name":"27-inch Monitor",
+        "price":299.99,
+        "stock":12,
+        "description":"4K IPS Display"
+    }
+]
